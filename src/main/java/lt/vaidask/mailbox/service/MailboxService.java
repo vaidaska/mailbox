@@ -36,7 +36,7 @@ public class MailboxService {
         List<Email> receivedEmails = getUserReceivedEmails(mailboxUser, emails);
 
         //Create mailbox of mailbox owner with sent/receives emails
-        mailboxes.add(new Mailbox( users.get(0), sentEmails, receivedEmails));
+        mailboxes.add(new Mailbox( mailboxUser, sentEmails, receivedEmails));
 
         return mailboxes;
     }
